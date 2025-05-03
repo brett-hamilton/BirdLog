@@ -10,12 +10,40 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("BirdLog").font(.largeTitle)
+            Text("Recent Sightings").font(.title2)
+            Spacer()
+            ZStack {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.mint)
+                ScrollView {
+                    Sighting()
+                    Divider()
+                    Sighting()
+                    Divider()
+                    Sighting()
+                }
+                .padding()
+            }
         }
         .padding()
+    }
+}
+
+struct Sighting: View {
+    var body: some View {
+        HStack {
+            Image(systemName: "bird.circle")
+            Text("Blue Jay")
+            Spacer()
+            Text("5/2/25")
+            Image(systemName: "chevron.right.circle.fill")
+        }
+        .imageScale(.large)
+        .onTapGesture {
+            print("tapped")
+        }
+        
     }
 }
 
