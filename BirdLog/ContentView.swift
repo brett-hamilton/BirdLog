@@ -33,8 +33,11 @@ struct ContentView: View {
 struct Sighting: View {
     var body: some View {
         HStack {
-            Image(systemName: "bird.circle")
-            Text("Blue Jay")
+            Image(systemName: "bird.circle").font(.title)
+            VStack(alignment: .leading) {
+                Text("Blue Jay").fontWeight(.semibold)
+                Text("Phipps Bend").font(.caption)
+            }
             Spacer()
             Text("5/2/25")
             Image(systemName: "chevron.right.circle.fill")
