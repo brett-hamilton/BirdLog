@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AllSightingsView: View {
     var body: some View {
         VStack {
             Text("BirdLog").font(.largeTitle)
@@ -51,5 +51,5 @@ struct Sighting: View {
 }
 
 #Preview {
-    ContentView()
+    AllSightingsView()
 }
